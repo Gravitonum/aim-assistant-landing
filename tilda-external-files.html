@@ -1,5 +1,26 @@
 <!-- COPY THIS TO TILDA HTML BLOCK -->
-<div id="root"></div>
+<div id="root" style="min-height: 100vh; background: #f0f0f0; border: 2px dashed red;">
+  <div style="padding: 20px; text-align: center;">
+    <h3>Загрузка приложения...</h3>
+    <p>Если это сообщение не исчезает, значит React не стартует.</p>
+    <div id="debug-log" style="text-align: left; background: #333; color: #0f0; padding: 10px; margin-top: 20px; font-family: monospace;"></div>
+  </div>
+</div>
+
+<script>
+  // Simple logger
+  function log(msg) {
+    console.log('[App Debug]', msg);
+    const el = document.getElementById('debug-log');
+    if (el) el.innerHTML += '<div>' + msg + '</div>';
+  }
+  log('HTML block initialized');
+  log('Waiting for scripts...');
+  
+  window.addEventListener('error', function(e) {
+    log('ERROR: ' + e.message);
+  });
+</script>
 
 <!-- FONTS -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -7,7 +28,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
 <!-- CSS: Замените ССЫЛКА_НА_CSS на ваш URL -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Gravitonum/aim-assistant-landing@master/dist/public/assets/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Gravitonum/aim-assistant-landing@master/dist/public/assets/index.css" onload="log('CSS loaded')" onerror="log('CSS failed to load')">
 
 <!-- JS: Замените ССЫЛКА_НА_JS на ваш URL -->
-<script type="module" crossorigin src="https://cdn.jsdelivr.net/gh/Gravitonum/aim-assistant-landing@master/dist/public/assets/index.js"></script>
+<script type="module" crossorigin src="https://cdn.jsdelivr.net/gh/Gravitonum/aim-assistant-landing@master/dist/public/assets/index.js" onload="log('JS loaded')" onerror="log('JS failed to load')"></script>
