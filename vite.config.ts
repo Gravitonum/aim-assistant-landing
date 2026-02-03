@@ -152,7 +152,7 @@ function vitePluginManusDebugCollector(): Plugin {
 
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()];
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins,
   resolve: {
     alias: {
@@ -163,6 +163,7 @@ export default defineConfig({
   },
   envDir: path.resolve(import.meta.dirname),
   root: path.resolve(import.meta.dirname, "client"),
+  base: command === 'build' ? 'https://cdn.jsdelivr.net/gh/Gravitonum/aim-assistant-landing@master/dist/public/' : '/',
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
@@ -193,4 +194,4 @@ export default defineConfig({
       deny: ["**/.*"],
     },
   },
-});
+}));
