@@ -25,33 +25,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-          isScrolled ? "bg-white shadow-md" : "bg-transparent"
-        }`}
-      >
-        <div className="container flex items-center justify-between h-16">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">AI</span>
-            </div>
-            <span className="font-bold text-lg text-foreground">AI'M Assistant</span>
-          </div>
-          <div className="flex gap-4">
-            <Button variant="ghost" className="text-foreground hover:text-primary">
-              О решении
-            </Button>
-            <Button variant="ghost" className="text-foreground hover:text-primary">
-              Возможности
-            </Button>
-            <Button className="bg-primary hover:bg-primary/90 text-white">
-              Начать
-            </Button>
-          </div>
-        </div>
-      </nav>
-
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div
@@ -289,98 +262,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-foreground text-white py-12">
-        <div className="container">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
-                  <span className="text-foreground font-bold text-sm">AI</span>
-                </div>
-                <span className="font-bold">AI'M Assistant</span>
-              </div>
-              <p className="text-gray-400">
-                Интеллектуальный помощник для вашего бизнеса
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Продукт</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <a href="#" className="hover:text-white transition">
-                    О решении
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition">
-                    Возможности
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition">
-                    Цены
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Компания</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <a href="#" className="hover:text-white transition">
-                    О нас
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition">
-                    Блог
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition">
-                    Контакты
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Поддержка</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <a href="#" className="hover:text-white transition">
-                    Документация
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition">
-                    FAQ
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition">
-                    Помощь
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-700 pt-8 flex justify-between items-center">
-            <p className="text-gray-400">
-              © 2026 Aim Consulting. Все права защищены.
-            </p>
-            <div className="flex gap-4 text-gray-400">
-              <a href="#" className="hover:text-white transition">
-                Политика конфиденциальности
-              </a>
-              <a href="#" className="hover:text-white transition">
-                Условия использования
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

@@ -1,114 +1,7 @@
 <!-- COPY THIS TO TILDA HTML BLOCK -->
 
-<!-- DIAGNOSTIC OVERLAY STYLE -->
-<style>
-  #app-diagnostic-overlay {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    width: 300px;
-    max-height: 400px;
-    background: rgba(0, 0, 0, 0.9);
-    color: #0f0;
-    font-family: monospace;
-    font-size: 12px;
-    padding: 10px;
-    z-index: 2147483647; /* Max Z-Index */
-    border: 1px solid #0f0;
-    overflow-y: auto;
-    display: block; /* Always visible initially */
-    pointer-events: none; /* Let clicks pass through */
-  }
-  #app-diagnostic-overlay.error {
-    border-color: red;
-    background: rgba(50, 0, 0, 0.9);
-    color: #ffaaaa;
-  }
-</style>
-
 <!-- ROOT CONTAINER -->
-<!-- Added !important and fixed positioning fallback to ensure visibility -->
-<div id="root" style="min-height: 100vh; width: 100%; position: relative; z-index: 1; background: #fff;">
-  <div style="padding: 50px; text-align: center;">
-    <h2 style="color: #333;">Загрузка приложения...</h2>
-    <p style="color: #666;">Если вы видите это сообщение дольше 5 секунд, проверьте логи диагностики справа внизу.</p>
-  </div>
-</div>
-
-<div id="app-diagnostic-overlay">
-  <strong>System Status:</strong><br>
-  <div id="app-diagnostic-content">Initializing...</div>
-</div>
-
-<script>
-  (function() {
-    const logEl = document.getElementById('app-diagnostic-content');
-    const overlay = document.getElementById('app-diagnostic-overlay');
-    
-    function log(msg, isError) {
-      console.log('[App Debug]', msg);
-      if (logEl) {
-        const line = document.createElement('div');
-        line.textContent = '>' + msg;
-        line.style.borderBottom = '1px solid #333';
-        line.style.padding = '2px 0';
-        if (isError) {
-          line.style.color = 'red';
-          if (overlay) overlay.classList.add('error');
-        }
-        logEl.appendChild(line);
-        // Auto scroll
-        overlay.scrollTop = overlay.scrollHeight;
-      }
-    }
-
-    log('Loader script started');
-
-    window.addEventListener('error', function(e) {
-      log('JS ERROR: ' + e.message, true);
-    });
-    
-    window.addEventListener('unhandledrejection', function(e) {
-      log('PROMISE ERROR: ' + (e.reason ? e.reason.message : e.reason), true);
-    });
-
-    // Check Root Element Availability
-    setTimeout(function() {
-      const root = document.getElementById('root');
-      if (!root) {
-        log('CRITICAL: #root element NOT found!', true);
-        // Attempt to create root
-        const newRoot = document.createElement('div');
-        newRoot.id = 'root';
-        document.body.appendChild(newRoot);
-        log('Created emergency #root in body');
-      } else {
-        log('Root element found. Rect: ' + JSON.stringify(root.getBoundingClientRect()));
-        if (root.getBoundingClientRect().height === 0) {
-           log('WARNING: Root has 0 height!', true);
-           root.style.minHeight = '100vh';
-        }
-      }
-    }, 1000);
-
-    // Final check
-    setTimeout(function() {
-      const root = document.getElementById('root');
-      if (root && root.children.length > 1) { // Assuming > 1 because of loader text
-         // React usually clears root or appends to it. 
-         // If React rendered, we might see different content.
-         log('Checking content...');
-         // Simple heuristic: did the loader text disappear?
-         if (root.innerText.includes('Загрузка приложения')) {
-            log('React likely NOT mounted (Loader still visible)', true);
-         } else {
-            log('React appears to be mounted');
-         }
-      }
-    }, 5000);
-
-  })();
-</script>
+<div id="root" style="min-height: 100vh; width: 100%; position: relative; z-index: 1; background: #fff;"></div>
 
 <!-- FONTS -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -116,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
 <!-- CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Gravitonum/aim-assistant-landing@8e7c97e246da312574ffd4e152bf67bd65f5f22f/dist/public/assets/index.css" onload="console.log('CSS loaded')" onerror="console.error('CSS failed')">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Gravitonum/aim-assistant-landing@8e7c97e246da312574ffd4e152bf67bd65f5f22f/dist/public/assets/index.css">
 
 <!-- JS -->
-<script type="module" crossorigin src="https://cdn.jsdelivr.net/gh/Gravitonum/aim-assistant-landing@8e7c97e246da312574ffd4e152bf67bd65f5f22f/dist/public/assets/index.js" onload="console.log('JS loaded')" onerror="console.error('JS failed')"></script>
+<script type="module" crossorigin src="https://cdn.jsdelivr.net/gh/Gravitonum/aim-assistant-landing@8e7c97e246da312574ffd4e152bf67bd65f5f22f/dist/public/assets/index.js"></script>
