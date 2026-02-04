@@ -31,7 +31,7 @@ export default function Home() {
           className="absolute inset-0 z-0"
           style={{
             backgroundImage:
-              "url('https://private-us-east-1.manuscdn.com/sessionFile/wQqPmgEn2zAkRGHnefkMFw/sandbox/n5mG8jVVyt1FHstHrYzUWe-img-1_1770123935000_na1fn_aGVyby1iYWNrZ3JvdW5k.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvd1FxUG1nRW4yekFrUkdIbmVma01Gdy9zYW5kYm94L241bUc4alZWeXQxRkhzdEhyWXpVV2UtaW1nLTFfMTc3MDEyMzkzNTAwMF9uYTFmbl9hR1Z5YnkxaVlXTnJaM0p2ZFc1ay5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=uXHPI~Lzt0F~IT4jiGVIIuYvQaqtTnDXT8rOZ4cyZS5rYbLlQkjMqPUCnwpSskRP7LstEWReQHooHiERBiUYsoyfcbrofI4TucQd0KihUNiZkcDIYj~Z9N9FmQfqIKHXMi4AzV9JqPDdW7Qujd2I7FWyfy~OKcreX4p~IYzDh-lUyrmeXVHi6L-QnhrLP7kEPUevDILYq8avWNOU2SD2LnJDY3MNMjRCqfXqAwAlQo1fv536x2iXxB-RgFTrW6LpY6OLdsc5VgsQrm7Y4BFADPWwTbRYptWECRbj9zlm545Cx5CDPImRsRpVE5P8hGQZegb6T0RdGhwprbXB3mao5g__')",
+              "url('/images/hero-bg.webp')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -195,7 +195,7 @@ export default function Home() {
 
             <div className="relative">
               <img
-                src="https://private-us-east-1.manuscdn.com/sessionFile/wQqPmgEn2zAkRGHnefkMFw/sandbox/n5mG8jVVyt1FHstHrYzUWe-img-3_1770123941000_na1fn_c29sdXRpb24tdmlzdWFs.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvd1FxUG1nRW4yekFrUkdIbmVma01Gdy9zYW5kYm94L241bUc4alZWeXQxRkhzdEhyWXpVV2UtaW1nLTNfMTc3MDEyMzk0MTAwMF9uYTFmbl9jMjlzZFhScGIyNHRkbWx6ZFdGcy5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=lT2JcgHfAloFYB1ImUeObx5msShPpRioO3YozCz94BK58~2t8fPI54zckbKAkc2tFrXOirpjmPf7KWTZlHJCzxbwnzg8~mdl~iCD8HdTITEVYmYDWKMCaVqlp5HscPDkj1JdQdrYgZLXqYtbp7zXweWJNHD1rcHJRJyXAxalY2CtE-OkhyzVdBlS0xdJsZmI8nu7KYZbVRr~zutKK9W~gY1nVy3iNsmtHc4h8jYK7iF2ZM31N9F5xL3jnNEBMsRTJZY~DVV8HCz7kddn6ZeI3ObxDPOM1Vy~lXOsJXUxHFuzfm4vMBKZHpg1fqGRNQXVqKcn9wypKHrmQ5LMO8xDMw__"
+                src="/images/solution.webp"
                 alt="AI'M Assistant Solution"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
@@ -228,7 +228,7 @@ export default function Home() {
 
           <div className="bg-white rounded-lg shadow-lg p-8 overflow-x-auto">
             <img
-              src="https://private-us-east-1.manuscdn.com/sessionFile/wQqPmgEn2zAkRGHnefkMFw/sandbox/n5mG8jVVyt1FHstHrYzUWe-img-2_1770123940000_na1fn_cHJvYmxlbS1zZWN0aW9uLXZpc3VhbA.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvd1FxUG1nRW4yekFrUkdIbmVma01Gdy9zYW5kYm94L241bUc4alZWeXQxRkhzdEhyWXpVV2UtaW1nLTJfMTc3MDEyMzk0MDAwMF9uYTFmbl9jSEp2WW14bGJTMXpaV04wYVc5dUxYWnBjM1ZoYkEucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=sknBv2mnZhXLXI5sZKrabtRZU6STxKQ-JxW4szCCh0BI2eAvFWp0kKickSSTarmbafgCfihXw5HxtXCfENylox8NHRqQ9fKI2Xg9P~uYWuOxwNq1HGA0JskjxfahYOprRcTNoIih2dpqS45kYaX4jKOGJEEgFtttEAy5Q4M~8yTuK5Lrab4jyx-J~zCosbBu8PHbGXTXYI3JPldGGUPvztEmWY2skZboEQFXxtP5XK437odQ~BNJP5N7kE7yFe0Vgc4slZ~z42pVLDd1r-HO5FRDYcqJyEhqW4qDN~HUwcQw4mrjSRiW9FsV-czchO~hoSeRGrjgPk7jAvhR3sFYNg__"
+              src="/images/architecture.webp"
               alt="AI'M Assistant Architecture"
               className="w-full h-auto"
             />
