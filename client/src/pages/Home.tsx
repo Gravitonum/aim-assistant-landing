@@ -262,6 +262,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Footer removed as requested */}
     </div>
   );
 }
